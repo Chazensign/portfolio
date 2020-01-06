@@ -599,11 +599,169 @@ input, select, textarea {
 		}
 
 /* Icon */
+		.fa-code {
+			font-size: 40px;
+			/* font-weight: 100; */
+		}
 
+/* Slideshow container */
+.slideshow-container {
+	box-sizing:border-box;
+  max-width: 100%;
+  position: relative;
+  margin: auto;
+}
+
+/* Hide the images by default */
+.mySlides {
+	/* border-radius: 5px; */
+	box-sizing:border-box;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+  display: none;
+}
+.mySlides img {
+	border-radius: 5px;
+}
+/* Next & previous buttons */
+.prev, .next {
+	box-sizing:border-box;
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  width: auto;
+  margin-top: -22px;
+  padding: 16px;
+  color: black;
+  font-weight: bold;
+  font-size: 18px;
+  transition: 0.6s ease;
+  border-radius: 0 3px 3px 0;
+	user-select: none;
+	border-bottom: none;
+}
+
+/* Position the "next button" to the right */
+.next {
+	box-sizing:border-box;
+  right: 0;
+  border-radius: 3px 0 0 3px;
+}
+
+/* On hover, add a black background color with a little bit see-through */
+.prev:hover, .next:hover {
+	box-sizing:border-box;
+	color: white;
+  background-color: rgba(0,0,0,0.8);
+}
+
+/* Caption text */
+.text {
+	box-sizing:border-box;
+	color: black;
+	font-weight: 600;
+  font-size: 15px;
+  padding: 4px 10px;
+  position: absolute;
+  bottom: 5px;
+  /* width: 100%; */
+	text-align: center;
+	background: rgba(255,255,255,0.8);
+	border-radius: 8px;
+}
+
+/* Number text (1/3 etc) */
+.numbertext {
+	box-sizing:border-box;
+	color: black;
+	font-weight: bold;
+  font-size: 16px;
+  padding: 2px 8px;
+  position: absolute;
+	bottom: 5px;
+	right: 5px;
+	background: rgba(255,255,255,0.8);
+	border-radius: 8px;
+}
+
+/* The dots/bullets/indicators */
+.dot {
+	box-sizing:border-box;
+  cursor: pointer;
+  height: 15px;
+  width: 15px;
+  margin: 0 2px;
+  background-color: #bbb;
+  border-radius: 50%;
+  display: inline-block;
+  transition: background-color 0.6s ease;
+}
+
+.active, .dot:hover {
+	box-sizing:border-box;
+  background-color: #717171;
+}
+
+/* Fading animation */
+.fade {
+	box-sizing:border-box;
+  -webkit-animation-name: fade;
+  -webkit-animation-duration: 2000ms;
+  animation-name: fade;
+  animation-duration: 2000ms;
+}
+
+@-webkit-keyframes fade {
+  from {opacity: .4}
+  to {opacity: 1}
+}
+
+@keyframes fade {
+  from {opacity: .4}
+  to {opacity: 1}
+}
 	.icon {
 		text-decoration: none;
 		border-bottom: none;
 		position: relative;
+	}
+	.html5 {
+		margin: 10px;
+		height: 130px;
+		width: auto;
+		z-index: 2;
+	}
+
+	.javascript {
+		margin: 10px;
+		height: 130px;
+		width: auto;
+		z-index: 2;
+	}
+	.react {
+		margin: 10px;
+		height: 130px;
+		width: auto;
+		z-index: 2;
+	}
+	.css3 {
+		margin: 10px;
+		height: 130px;
+		width: auto;
+		z-index: 2;
+	}
+	.post {
+		margin: 10px;
+		height: 130px;
+		width: auto;
+		z-index: 2;
+	}
+	.node {
+		margin: 10px;
+		height: 130px;
+		width: auto;
+		z-index: 2;
 	}
 
 		.icon:before {
@@ -657,6 +815,7 @@ input, select, textarea {
 			position: absolute;
 			top: 0;
 			width: 100%;
+			z-index: 0;
 		}
 
 		.image img {
@@ -695,14 +854,27 @@ input, select, textarea {
 			}
 
 		.image.main {
-			display: block;
-			margin: 2.5rem 0;
+			display: flex;
+			flex-wrap: wrap;
+			align-items: center;
+			justify-content: space-between;
+			margin: 1.5rem 0;
 			width: 100%;
 		}
-
-			.image.main img {
-				width: 100%;
-			}
+		#wrapper #intro {
+			width: 30rem;
+			padding-top: 2.5rem;
+		}
+		#wrapper #main #skills p {
+			margin-bottom: 5px; 
+		}
+		#wrapper #main #work {
+			padding-top: 2.5rem;
+		}
+		.image-intro img {
+			width: 100%;
+			justify-self: center;
+		}
 
 		@media screen and (max-width: 736px) {
 
@@ -1140,9 +1312,12 @@ input, select, textarea {
 			-ms-transition-delay: 0.75s;
 			transition-delay: 0.75s;
 			background-image: linear-gradient(to top, rgba(19, 21, 25, 0.5), rgba(19, 21, 25, 0.5)), url("../../images/overlay.png");
-			background-size: auto, 256px 256px;
-			background-position: center, center;
-			background-repeat: no-repeat, repeat;
+			background-size: auto,
+ 256px 256px;
+			background-position: center,
+ center;
+			background-repeat: no-repeat,
+ repeat;
 			z-index: 2;
 		}
 
@@ -1155,7 +1330,7 @@ input, select, textarea {
 			-webkit-transition: -webkit-transform 0.325s ease-in-out, -webkit-filter 0.325s ease-in-out;
 			-ms-transition: -ms-transform 0.325s ease-in-out, -ms-filter 0.325s ease-in-out;
 			transition: transform 0.325s ease-in-out, filter 0.325s ease-in-out;
-			background-image: url("../../images/bg.jpg");
+			background-image: radial-gradient(circle, rgba(0,0,0,.5) 0%, rgba(0,0,0,0.5) 100%), url("../../images/blocks.jpg");
 			background-position: center;
 			background-size: cover;
 			background-repeat: no-repeat;
@@ -1290,7 +1465,7 @@ input, select, textarea {
 		#header .logo {
 			width: 5.5rem;
 			height: 5.5rem;
-			line-height: 5.5rem;
+			line-height: 6.25rem;
 			border: solid 1px #ffffff;
 			border-radius: 100%;
 		}
@@ -1635,7 +1810,7 @@ input, select, textarea {
 
 		#footer .copyright {
 			letter-spacing: 0.2rem;
-			font-size: 0.6rem;
+			font-size: 0.4rem;
 			opacity: 0.75;
 			margin-bottom: 0;
 			text-transform: uppercase;
