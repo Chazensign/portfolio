@@ -603,6 +603,12 @@ input, select, textarea {
 			font-size: 40px;
 			/* font-weight: 100; */
 		}
+		@media screen and (max-width: 736px) {
+			.fa-code {
+				font-size: 35px;
+				margin-top: 16px;
+			}
+		}
 
 /* Slideshow container */
 .slideshow-container {
